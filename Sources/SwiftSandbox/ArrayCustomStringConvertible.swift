@@ -22,7 +22,14 @@ extension User: CustomStringConvertible {
 }
 
 
-// CustomDebugStringConvertibleのほうが優先されるようだ
+/*
+ CustomDebugStringConvertibleのほうが優先されるようだ
+ print(users.description)
+ print(users.debugDescription)
+ 
+ [hogedebug, fugadebug]
+ [hogedebug, fugadebug]
+ */
 extension User: CustomDebugStringConvertible {
     var debugDescription: String {
         name + "debug"
