@@ -18,5 +18,11 @@ let package = Package(
         .testTarget(
             name: "SwiftSandboxTests",
             dependencies: ["SwiftSandbox"]),
-    ]
-)
+        .target(
+            name: "SampleProJava",
+            dependencies: []),
+        .target(name: "CodingTest"),
+        .testTarget(
+            name: "CodingTestTests",
+            dependencies: ["CodingTest"])
+    ])
