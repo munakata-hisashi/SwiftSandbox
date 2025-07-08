@@ -14,16 +14,32 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .executableTarget(
             name: "SwiftSandbox",
-            dependencies: []),
+            dependencies: []
+        ),
         .testTarget(
             name: "SwiftSandboxTests",
-            dependencies: ["SwiftSandbox"]),
-        .target(name: "SampleProJava"),
+            dependencies: ["SwiftSandbox"]
+        ),
+        .target(
+            name: "SampleProJava"
+        ),
         .testTarget(
             name: "SampleProJavaTests",
-            dependencies: ["SampleProJava"]),
-        .target(name: "CodingTest"),
+            dependencies: ["SampleProJava"]
+        ),
+        .target(
+            name: "CodingTest"
+        ),
         .testTarget(
             name: "CodingTestTests",
-            dependencies: ["CodingTest"])
+            dependencies: ["CodingTest"]
+        ),
+        .target(
+            name: "Parser",
+            dependencies: []
+        ),
+        .testTarget(
+            name: "ParserTests",
+            dependencies: ["Parser"]
+        ),
     ])
